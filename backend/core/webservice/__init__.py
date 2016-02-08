@@ -3,6 +3,7 @@ import flask
 from flask_mongoengine import MongoEngine
 from core.webservice.api import login as login_ws
 from core.webservice.api import sports as sports_ws
+from core.webservice.api import refresh_token as token_ws
 
 
 def create_app():
@@ -19,5 +20,6 @@ def create_app():
 
     app.register_blueprint(login_ws.api, url_prefix='/login')
     app.register_blueprint(sports_ws.api, url_prefix='/sports')
+    app.register_blueprint(token_ws.api, url_prefix='/refresh_token')
 
     return app
