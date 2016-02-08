@@ -11,3 +11,10 @@ class Sport(Document):
     meta = {
         'collection': 'sports'
     }
+
+    def json(self):
+        return {
+            'name': self.name,
+            'image_url': self.image,
+            'category': self.category
+        }
