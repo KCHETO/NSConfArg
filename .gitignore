@@ -64,3 +64,6 @@ fastlane/screenshots
 
 # Mac OS
 .DS_Store
+
+# Pycharm
+.idea
