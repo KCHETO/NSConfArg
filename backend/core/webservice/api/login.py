@@ -21,7 +21,7 @@ def login(args):
         token = Token().save()
         json = {
             'access_token': token.access_token,
-            'expire_in': token.expire_in,
+            'expire_in': token.expire_in.isoformat(),
             'name': 'NSConf-Argentina',
             'image_url': 'http://nsconfarg.com/img/nsconfarg@2x.png'
         }

@@ -13,8 +13,31 @@ class LoginOperation: GroupOperation {
     init(username: String, password: String, completionHandler: () -> Void) {
         
         let url = NSURL(string: "http://localhost:9090/login")!
-        let task = NSURLSession.sharedSession().downloadTaskWithURL(url) { url, response, error in
-            // TODO: Save the AccessToken on the Keychain
+        let params = [
+            "username": username,
+            "password": password
+        ]
+        
+        let request = NSMutableURLRequest(URL: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-type")
+        request.HTTPMethod = "POST"
+        request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(params, options: .PrettyPrinted)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { data, response, error in
+            if let _ = error {
+                print("Error: \(error!)")
+                return
+            }
+            
+            if let json = try! NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary {
+                print("Login response data: \(json)")
+                
+                let accessToken = json["access_token"] as! String
+                let expirationDate = NSDate.dateFromISO(json["expire_in"] as! String)
+                
+                Credentials.sharedInstance.accessToken = accessToken
+                Credentials.sharedInstance.expirationDate = expirationDate
+            }
         }
         
         self.loginOperation = URLSessionTaskOperation(task: task)

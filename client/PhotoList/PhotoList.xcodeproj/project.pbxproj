@@ -34,9 +34,12 @@
 		DF6A95001C91AC7E00BA832C /* Dictionary+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94DB1C91AC7E00BA832C /* Dictionary+Operations.swift */; };
 		DF6A95011C91AC7E00BA832C /* NSOperation+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94DC1C91AC7E00BA832C /* NSOperation+Operations.swift */; };
 		DF6A95021C91AC7E00BA832C /* UIUserNotifications+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94DD1C91AC7E00BA832C /* UIUserNotifications+Operations.swift */; };
-		DF78299E1C691F6D002F3191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78299C1C691F6D002F3191 /* ViewController.swift */; };
+		DF78299E1C691F6D002F3191 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78299C1C691F6D002F3191 /* LoginViewController.swift */; };
 		DFA25B751C95C26E00C1238E /* RefreshTokenOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B741C95C26E00C1238E /* RefreshTokenOperation.swift */; };
 		DFA25B781C9627E400C1238E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B771C9627E400C1238E /* Credentials.swift */; };
+		DFA25B7B1C96EE4100C1238E /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B7A1C96EE4100C1238E /* UIKit+Extensions.swift */; };
+		DFA25B7D1C96F23700C1238E /* UIView+Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B7C1C96F23700C1238E /* UIView+Drawer.swift */; };
+		DFA25B7F1C96F62C00C1238E /* NSDate+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B7E1C96F62C00C1238E /* NSDate+Formatter.swift */; };
 		DFAF59631C691D6300C89B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF59621C691D6300C89B6F /* AppDelegate.swift */; };
 		DFAF59681C691D6300C89B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAF59661C691D6300C89B6F /* Main.storyboard */; };
 		DFAF596A1C691D6300C89B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAF59691C691D6300C89B6F /* Assets.xcassets */; };
@@ -90,9 +93,12 @@
 		DF6A94DB1C91AC7E00BA832C /* Dictionary+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Operations.swift"; sourceTree = "<group>"; };
 		DF6A94DC1C91AC7E00BA832C /* NSOperation+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOperation+Operations.swift"; sourceTree = "<group>"; };
 		DF6A94DD1C91AC7E00BA832C /* UIUserNotifications+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIUserNotifications+Operations.swift"; sourceTree = "<group>"; };
-		DF78299C1C691F6D002F3191 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF78299C1C691F6D002F3191 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DFA25B741C95C26E00C1238E /* RefreshTokenOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenOperation.swift; sourceTree = "<group>"; };
 		DFA25B771C9627E400C1238E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		DFA25B7A1C96EE4100C1238E /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		DFA25B7C1C96F23700C1238E /* UIView+Drawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Drawer.swift"; sourceTree = "<group>"; };
+		DFA25B7E1C96F62C00C1238E /* NSDate+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Formatter.swift"; sourceTree = "<group>"; };
 		DFAF595F1C691D6300C89B6F /* PhotoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAF59621C691D6300C89B6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFAF59671C691D6300C89B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -237,7 +243,7 @@
 		DF78299B1C691F6D002F3191 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DF78299C1C691F6D002F3191 /* ViewController.swift */,
+				DF78299C1C691F6D002F3191 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,9 +273,20 @@
 		DFA25B761C96270500C1238E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DFA25B791C96EE3700C1238E /* Extensions */,
 				DFA25B771C9627E400C1238E /* Credentials.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		DFA25B791C96EE3700C1238E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DFA25B7A1C96EE4100C1238E /* UIKit+Extensions.swift */,
+				DFA25B7C1C96F23700C1238E /* UIView+Drawer.swift */,
+				DFA25B7E1C96F62C00C1238E /* NSDate+Formatter.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DFAF59561C691D6300C89B6F = {
@@ -462,7 +479,9 @@
 				DF6A94F91C91AC7E00BA832C /* BlockOperation.swift in Sources */,
 				DF6A94F01C91AC7E00BA832C /* ReachabilityCondition.swift in Sources */,
 				DF6A94EC1C91AC7E00BA832C /* NegatedCondition.swift in Sources */,
+				DFA25B7F1C96F62C00C1238E /* NSDate+Formatter.swift in Sources */,
 				DF6A94ED1C91AC7E00BA832C /* NoCancelledDependencies.swift in Sources */,
+				DFA25B7D1C96F23700C1238E /* UIView+Drawer.swift in Sources */,
 				DF6A94DE1C91AC7E00BA832C /* ExpirationTokenCondition.swift in Sources */,
 				DF6A94F31C91AC7E00BA832C /* UserNotificationCondition.swift in Sources */,
 				DF03A3421C95BDAA00F2B7F2 /* RoundedButton.swift in Sources */,
@@ -471,8 +490,9 @@
 				DF6A94F81C91AC7E00BA832C /* TimeoutObserver.swift in Sources */,
 				DF6A94FB1C91AC7E00BA832C /* GroupOperation.swift in Sources */,
 				DF6A94EB1C91AC7E00BA832C /* MutuallyExclusive.swift in Sources */,
-				DF78299E1C691F6D002F3191 /* ViewController.swift in Sources */,
+				DF78299E1C691F6D002F3191 /* LoginViewController.swift in Sources */,
 				DF6A94FA1C91AC7E00BA832C /* DelayOperation.swift in Sources */,
+				DFA25B7B1C96EE4100C1238E /* UIKit+Extensions.swift in Sources */,
 				DF6A94EE1C91AC7E00BA832C /* OperationCondition.swift in Sources */,
 				DFAF59631C691D6300C89B6F /* AppDelegate.swift in Sources */,
 				DF6A94FF1C91AC7E00BA832C /* OperationQueue.swift in Sources */,
