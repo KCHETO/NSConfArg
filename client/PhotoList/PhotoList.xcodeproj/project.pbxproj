@@ -7,7 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF03A3421C95BDAA00F2B7F2 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF03A3411C95BDAA00F2B7F2 /* RoundedButton.swift */; };
+		DF6A94DE1C91AC7E00BA832C /* ExpirationTokenCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94B31C91AC7E00BA832C /* ExpirationTokenCondition.swift */; };
+		DF6A94DF1C91AC7E00BA832C /* UserLoggedInCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94B41C91AC7E00BA832C /* UserLoggedInCondition.swift */; };
+		DF6A94E81C91AC7E00BA832C /* LoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94BE1C91AC7E00BA832C /* LoginOperation.swift */; };
+		DF6A94EB1C91AC7E00BA832C /* MutuallyExclusive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94C21C91AC7E00BA832C /* MutuallyExclusive.swift */; };
+		DF6A94EC1C91AC7E00BA832C /* NegatedCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94C31C91AC7E00BA832C /* NegatedCondition.swift */; };
+		DF6A94ED1C91AC7E00BA832C /* NoCancelledDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94C41C91AC7E00BA832C /* NoCancelledDependencies.swift */; };
+		DF6A94EE1C91AC7E00BA832C /* OperationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94C51C91AC7E00BA832C /* OperationCondition.swift */; };
+		DF6A94EF1C91AC7E00BA832C /* OperationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94C61C91AC7E00BA832C /* OperationErrors.swift */; };
+		DF6A94F01C91AC7E00BA832C /* ReachabilityCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94C71C91AC7E00BA832C /* ReachabilityCondition.swift */; };
+		DF6A94F11C91AC7E00BA832C /* RemoteNotificationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94C81C91AC7E00BA832C /* RemoteNotificationCondition.swift */; };
+		DF6A94F21C91AC7E00BA832C /* SilentCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94C91C91AC7E00BA832C /* SilentCondition.swift */; };
+		DF6A94F31C91AC7E00BA832C /* UserNotificationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94CA1C91AC7E00BA832C /* UserNotificationCondition.swift */; };
+		DF6A94F41C91AC7E00BA832C /* BlockObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94CC1C91AC7E00BA832C /* BlockObserver.swift */; };
+		DF6A94F51C91AC7E00BA832C /* NetworkObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94CD1C91AC7E00BA832C /* NetworkObserver.swift */; };
+		DF6A94F61C91AC7E00BA832C /* OperationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94CE1C91AC7E00BA832C /* OperationObserver.swift */; };
+		DF6A94F81C91AC7E00BA832C /* TimeoutObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94D01C91AC7E00BA832C /* TimeoutObserver.swift */; };
+		DF6A94F91C91AC7E00BA832C /* BlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94D21C91AC7E00BA832C /* BlockOperation.swift */; };
+		DF6A94FA1C91AC7E00BA832C /* DelayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94D31C91AC7E00BA832C /* DelayOperation.swift */; };
+		DF6A94FB1C91AC7E00BA832C /* GroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94D41C91AC7E00BA832C /* GroupOperation.swift */; };
+		DF6A94FC1C91AC7E00BA832C /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94D51C91AC7E00BA832C /* Operation.swift */; };
+		DF6A94FD1C91AC7E00BA832C /* URLSessionTaskOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94D61C91AC7E00BA832C /* URLSessionTaskOperation.swift */; };
+		DF6A94FE1C91AC7E00BA832C /* ExclusivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94D81C91AC7E00BA832C /* ExclusivityController.swift */; };
+		DF6A94FF1C91AC7E00BA832C /* OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94D91C91AC7E00BA832C /* OperationQueue.swift */; };
+		DF6A95001C91AC7E00BA832C /* Dictionary+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94DB1C91AC7E00BA832C /* Dictionary+Operations.swift */; };
+		DF6A95011C91AC7E00BA832C /* NSOperation+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94DC1C91AC7E00BA832C /* NSOperation+Operations.swift */; };
+		DF6A95021C91AC7E00BA832C /* UIUserNotifications+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94DD1C91AC7E00BA832C /* UIUserNotifications+Operations.swift */; };
 		DF78299E1C691F6D002F3191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78299C1C691F6D002F3191 /* ViewController.swift */; };
+		DFA25B751C95C26E00C1238E /* RefreshTokenOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B741C95C26E00C1238E /* RefreshTokenOperation.swift */; };
+		DFA25B781C9627E400C1238E /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B771C9627E400C1238E /* Credentials.swift */; };
 		DFAF59631C691D6300C89B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF59621C691D6300C89B6F /* AppDelegate.swift */; };
 		DFAF59681C691D6300C89B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAF59661C691D6300C89B6F /* Main.storyboard */; };
 		DFAF596A1C691D6300C89B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAF59691C691D6300C89B6F /* Assets.xcassets */; };
@@ -34,7 +63,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF03A3411C95BDAA00F2B7F2 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		DF6A94B31C91AC7E00BA832C /* ExpirationTokenCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirationTokenCondition.swift; sourceTree = "<group>"; };
+		DF6A94B41C91AC7E00BA832C /* UserLoggedInCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoggedInCondition.swift; sourceTree = "<group>"; };
+		DF6A94BE1C91AC7E00BA832C /* LoginOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOperation.swift; sourceTree = "<group>"; };
+		DF6A94C21C91AC7E00BA832C /* MutuallyExclusive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutuallyExclusive.swift; sourceTree = "<group>"; };
+		DF6A94C31C91AC7E00BA832C /* NegatedCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NegatedCondition.swift; sourceTree = "<group>"; };
+		DF6A94C41C91AC7E00BA832C /* NoCancelledDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoCancelledDependencies.swift; sourceTree = "<group>"; };
+		DF6A94C51C91AC7E00BA832C /* OperationCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationCondition.swift; sourceTree = "<group>"; };
+		DF6A94C61C91AC7E00BA832C /* OperationErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationErrors.swift; sourceTree = "<group>"; };
+		DF6A94C71C91AC7E00BA832C /* ReachabilityCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityCondition.swift; sourceTree = "<group>"; };
+		DF6A94C81C91AC7E00BA832C /* RemoteNotificationCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNotificationCondition.swift; sourceTree = "<group>"; };
+		DF6A94C91C91AC7E00BA832C /* SilentCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SilentCondition.swift; sourceTree = "<group>"; };
+		DF6A94CA1C91AC7E00BA832C /* UserNotificationCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationCondition.swift; sourceTree = "<group>"; };
+		DF6A94CC1C91AC7E00BA832C /* BlockObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockObserver.swift; sourceTree = "<group>"; };
+		DF6A94CD1C91AC7E00BA832C /* NetworkObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkObserver.swift; sourceTree = "<group>"; };
+		DF6A94CE1C91AC7E00BA832C /* OperationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationObserver.swift; sourceTree = "<group>"; };
+		DF6A94D01C91AC7E00BA832C /* TimeoutObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeoutObserver.swift; sourceTree = "<group>"; };
+		DF6A94D21C91AC7E00BA832C /* BlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockOperation.swift; sourceTree = "<group>"; };
+		DF6A94D31C91AC7E00BA832C /* DelayOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayOperation.swift; sourceTree = "<group>"; };
+		DF6A94D41C91AC7E00BA832C /* GroupOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupOperation.swift; sourceTree = "<group>"; };
+		DF6A94D51C91AC7E00BA832C /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		DF6A94D61C91AC7E00BA832C /* URLSessionTaskOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionTaskOperation.swift; sourceTree = "<group>"; };
+		DF6A94D81C91AC7E00BA832C /* ExclusivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExclusivityController.swift; sourceTree = "<group>"; };
+		DF6A94D91C91AC7E00BA832C /* OperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationQueue.swift; sourceTree = "<group>"; };
+		DF6A94DB1C91AC7E00BA832C /* Dictionary+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Operations.swift"; sourceTree = "<group>"; };
+		DF6A94DC1C91AC7E00BA832C /* NSOperation+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOperation+Operations.swift"; sourceTree = "<group>"; };
+		DF6A94DD1C91AC7E00BA832C /* UIUserNotifications+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIUserNotifications+Operations.swift"; sourceTree = "<group>"; };
 		DF78299C1C691F6D002F3191 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFA25B741C95C26E00C1238E /* RefreshTokenOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenOperation.swift; sourceTree = "<group>"; };
+		DFA25B771C9627E400C1238E /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		DFAF595F1C691D6300C89B6F /* PhotoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAF59621C691D6300C89B6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFAF59671C691D6300C89B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +132,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF03A33E1C95BCEA00F2B7F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF03A3411C95BDAA00F2B7F2 /* RoundedButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DF6A94B11C91AC7E00BA832C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A94B21C91AC7E00BA832C /* Conditions */,
+				DF6A94B51C91AC7E00BA832C /* Operations */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DF6A94B21C91AC7E00BA832C /* Conditions */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A94B31C91AC7E00BA832C /* ExpirationTokenCondition.swift */,
+				DF6A94B41C91AC7E00BA832C /* UserLoggedInCondition.swift */,
+			);
+			path = Conditions;
+			sourceTree = "<group>";
+		};
+		DF6A94B51C91AC7E00BA832C /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A94BE1C91AC7E00BA832C /* LoginOperation.swift */,
+				DFA25B741C95C26E00C1238E /* RefreshTokenOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		DF6A94C11C91AC7E00BA832C /* Conditions */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A94C21C91AC7E00BA832C /* MutuallyExclusive.swift */,
+				DF6A94C31C91AC7E00BA832C /* NegatedCondition.swift */,
+				DF6A94C41C91AC7E00BA832C /* NoCancelledDependencies.swift */,
+				DF6A94C51C91AC7E00BA832C /* OperationCondition.swift */,
+				DF6A94C61C91AC7E00BA832C /* OperationErrors.swift */,
+				DF6A94C71C91AC7E00BA832C /* ReachabilityCondition.swift */,
+				DF6A94C81C91AC7E00BA832C /* RemoteNotificationCondition.swift */,
+				DF6A94C91C91AC7E00BA832C /* SilentCondition.swift */,
+				DF6A94CA1C91AC7E00BA832C /* UserNotificationCondition.swift */,
+			);
+			path = Conditions;
+			sourceTree = "<group>";
+		};
+		DF6A94CB1C91AC7E00BA832C /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A94CC1C91AC7E00BA832C /* BlockObserver.swift */,
+				DF6A94CD1C91AC7E00BA832C /* NetworkObserver.swift */,
+				DF6A94CE1C91AC7E00BA832C /* OperationObserver.swift */,
+				DF6A94D01C91AC7E00BA832C /* TimeoutObserver.swift */,
+			);
+			path = Observers;
+			sourceTree = "<group>";
+		};
+		DF6A94D11C91AC7E00BA832C /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A94D21C91AC7E00BA832C /* BlockOperation.swift */,
+				DF6A94D31C91AC7E00BA832C /* DelayOperation.swift */,
+				DF6A94D41C91AC7E00BA832C /* GroupOperation.swift */,
+				DF6A94D51C91AC7E00BA832C /* Operation.swift */,
+				DF6A94D61C91AC7E00BA832C /* URLSessionTaskOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		DF6A94D71C91AC7E00BA832C /* Queues */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A94D81C91AC7E00BA832C /* ExclusivityController.swift */,
+				DF6A94D91C91AC7E00BA832C /* OperationQueue.swift */,
+			);
+			path = Queues;
+			sourceTree = "<group>";
+		};
+		DF6A94DA1C91AC7E00BA832C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DF6A94DB1C91AC7E00BA832C /* Dictionary+Operations.swift */,
+				DF6A94DC1C91AC7E00BA832C /* NSOperation+Operations.swift */,
+				DF6A94DD1C91AC7E00BA832C /* UIUserNotifications+Operations.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		DF78299A1C691F5B002F3191 /* Storyboars */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +245,12 @@
 		DF78299D1C691F6D002F3191 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				DF6A94B11C91AC7E00BA832C /* App */,
+				DF6A94C11C91AC7E00BA832C /* Conditions */,
+				DF6A94CB1C91AC7E00BA832C /* Observers */,
+				DF6A94D11C91AC7E00BA832C /* Operations */,
+				DF6A94D71C91AC7E00BA832C /* Queues */,
+				DF6A94DA1C91AC7E00BA832C /* Utils */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -105,6 +262,14 @@
 				DFAF596E1C691D6300C89B6F /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		DFA25B761C96270500C1238E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DFA25B771C9627E400C1238E /* Credentials.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		DFAF59561C691D6300C89B6F = {
@@ -133,6 +298,8 @@
 				DF78299B1C691F6D002F3191 /* Controllers */,
 				DF78299D1C691F6D002F3191 /* Operations */,
 				DF78299A1C691F5B002F3191 /* Storyboars */,
+				DF03A33E1C95BCEA00F2B7F2 /* Views */,
+				DFA25B761C96270500C1238E /* Utils */,
 				DF78299F1C691F7A002F3191 /* Resources */,
 				DFAF59621C691D6300C89B6F /* AppDelegate.swift */,
 			);
@@ -288,8 +455,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6A94F11C91AC7E00BA832C /* RemoteNotificationCondition.swift in Sources */,
+				DF6A94E81C91AC7E00BA832C /* LoginOperation.swift in Sources */,
+				DFA25B751C95C26E00C1238E /* RefreshTokenOperation.swift in Sources */,
+				DF6A94F51C91AC7E00BA832C /* NetworkObserver.swift in Sources */,
+				DF6A94F91C91AC7E00BA832C /* BlockOperation.swift in Sources */,
+				DF6A94F01C91AC7E00BA832C /* ReachabilityCondition.swift in Sources */,
+				DF6A94EC1C91AC7E00BA832C /* NegatedCondition.swift in Sources */,
+				DF6A94ED1C91AC7E00BA832C /* NoCancelledDependencies.swift in Sources */,
+				DF6A94DE1C91AC7E00BA832C /* ExpirationTokenCondition.swift in Sources */,
+				DF6A94F31C91AC7E00BA832C /* UserNotificationCondition.swift in Sources */,
+				DF03A3421C95BDAA00F2B7F2 /* RoundedButton.swift in Sources */,
+				DF6A94FC1C91AC7E00BA832C /* Operation.swift in Sources */,
+				DF6A94DF1C91AC7E00BA832C /* UserLoggedInCondition.swift in Sources */,
+				DF6A94F81C91AC7E00BA832C /* TimeoutObserver.swift in Sources */,
+				DF6A94FB1C91AC7E00BA832C /* GroupOperation.swift in Sources */,
+				DF6A94EB1C91AC7E00BA832C /* MutuallyExclusive.swift in Sources */,
 				DF78299E1C691F6D002F3191 /* ViewController.swift in Sources */,
+				DF6A94FA1C91AC7E00BA832C /* DelayOperation.swift in Sources */,
+				DF6A94EE1C91AC7E00BA832C /* OperationCondition.swift in Sources */,
 				DFAF59631C691D6300C89B6F /* AppDelegate.swift in Sources */,
+				DF6A94FF1C91AC7E00BA832C /* OperationQueue.swift in Sources */,
+				DF6A94F61C91AC7E00BA832C /* OperationObserver.swift in Sources */,
+				DF6A94F41C91AC7E00BA832C /* BlockObserver.swift in Sources */,
+				DF6A95001C91AC7E00BA832C /* Dictionary+Operations.swift in Sources */,
+				DFA25B781C9627E400C1238E /* Credentials.swift in Sources */,
+				DF6A95021C91AC7E00BA832C /* UIUserNotifications+Operations.swift in Sources */,
+				DF6A94F21C91AC7E00BA832C /* SilentCondition.swift in Sources */,
+				DF6A94FD1C91AC7E00BA832C /* URLSessionTaskOperation.swift in Sources */,
+				DF6A94EF1C91AC7E00BA832C /* OperationErrors.swift in Sources */,
+				DF6A95011C91AC7E00BA832C /* NSOperation+Operations.swift in Sources */,
+				DF6A94FE1C91AC7E00BA832C /* ExclusivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,6 @@ import logging
 
 from core.model.token import Token
 from webargs import (flaskparser, fields)
-from werkzeug.security import gen_salt
 
 api = flask.Blueprint('nsconf.login', __name__)
 logger = logging.getLogger('webservices.api.login')
@@ -22,6 +21,7 @@ def login(args):
         token = Token().save()
         json = {
             'access_token': token.access_token,
+            'expire_in': token.expire_in,
             'name': 'NSConf-Argentina',
             'image_url': 'http://nsconfarg.com/img/nsconfarg@2x.png'
         }
