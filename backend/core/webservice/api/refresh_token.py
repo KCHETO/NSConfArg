@@ -1,3 +1,4 @@
+import datetime
 import flask
 
 from core.common.decorators import validation_token_required
@@ -14,9 +15,14 @@ def refresh_token():
     access_token = extract_bearer_token()
     Token.objects(access_token=access_token).update(set__revoked=True)
 
-    new_token = Token()
+    new_token = Token(
+        expire_in=datetime.datetime.now() + datetime.timedelta(seconds=40)
+    )
     new_token.save()
 
-    return flask.jsonify({'access_token': new_token.access_token})
+    return flask.jsonify({
+        'access_token': new_token.access_token,
+        'expire_in': new_token.expire_in.isoformat()
+    })
 
 

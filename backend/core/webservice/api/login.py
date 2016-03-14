@@ -1,3 +1,4 @@
+import datetime
 import flask
 import logging
 
@@ -18,7 +19,9 @@ def login(args):
     password = args['password']
 
     if username == 'nsconfarg' and password == 'password':
-        token = Token().save()
+        token = Token(
+            expire_in=datetime.datetime.now() + datetime.timedelta(seconds=40)
+        ).save()
         json = {
             'access_token': token.access_token,
             'expire_in': token.expire_in.isoformat(),
