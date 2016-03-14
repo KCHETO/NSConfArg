@@ -13,29 +13,46 @@ class Credentials {
     
     static let sharedInstance = Credentials()
 
-    let userDefatults = NSUserDefaults.standardUserDefaults()
-    
     var accessToken: String? {
-        didSet {
-            userDefatults.setObject(accessToken, forKey: CredentialKey.AccessToken.rawValue)
-            userDefatults.synchronize()
+        get {
+            return userDefatults.objectForKey(CredentialKey.AccessToken.rawValue) as? String
+        }
+        set {
+            _accessToken = newValue
         }
     }
     
     var expirationDate: NSDate? {
+        get {
+            return userDefatults.objectForKey(CredentialKey.ExpirationDate.rawValue) as? NSDate
+        }
+        set {
+            _expirationDate = newValue
+        }
+    }
+    
+    private let userDefatults = NSUserDefaults.standardUserDefaults()
+    private var _accessToken: String? {
         didSet {
-            userDefatults.setObject(expirationDate, forKey: CredentialKey.ExpirationDate.rawValue)
+            userDefatults.setObject(_accessToken, forKey: CredentialKey.AccessToken.rawValue)
+            userDefatults.synchronize()
+        }
+    }
+    
+    private var _expirationDate: NSDate? {
+        didSet {
+            userDefatults.setObject(_expirationDate, forKey: CredentialKey.ExpirationDate.rawValue)
             userDefatults.synchronize()
         }
     }
     
     func isLogged() -> Bool {
-        return self.accessToken != nil
+        return accessToken != nil
     }
     
 }
 
-private enum CredentialKey: String {
+enum CredentialKey: String {
     case AccessToken = "com.nsconfar.credential.access_token"
     case ExpirationDate = "com.nsconfar.credential.expiration_date"
 }

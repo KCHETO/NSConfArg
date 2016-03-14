@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		DF03A3421C95BDAA00F2B7F2 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF03A3411C95BDAA00F2B7F2 /* RoundedButton.swift */; };
+		DF55E9F31C97040400EE9484 /* ParseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF55E9F21C97040400EE9484 /* ParseOperation.swift */; };
+		DF55EA071C970AC500EE9484 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF55EA031C970ABA00EE9484 /* Realm.framework */; };
+		DF55EA081C970AC500EE9484 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF55EA031C970ABA00EE9484 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DF55EA091C970AC600EE9484 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF55EA041C970ABA00EE9484 /* RealmSwift.framework */; };
+		DF55EA0A1C970AC600EE9484 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF55EA041C970ABA00EE9484 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DF6A94DE1C91AC7E00BA832C /* ExpirationTokenCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94B31C91AC7E00BA832C /* ExpirationTokenCondition.swift */; };
 		DF6A94DF1C91AC7E00BA832C /* UserLoggedInCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94B41C91AC7E00BA832C /* UserLoggedInCondition.swift */; };
 		DF6A94E81C91AC7E00BA832C /* LoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6A94BE1C91AC7E00BA832C /* LoginOperation.swift */; };
@@ -40,6 +45,11 @@
 		DFA25B7B1C96EE4100C1238E /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B7A1C96EE4100C1238E /* UIKit+Extensions.swift */; };
 		DFA25B7D1C96F23700C1238E /* UIView+Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B7C1C96F23700C1238E /* UIView+Drawer.swift */; };
 		DFA25B7F1C96F62C00C1238E /* NSDate+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B7E1C96F62C00C1238E /* NSDate+Formatter.swift */; };
+		DFA25B811C96F8C000C1238E /* SportsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B801C96F8C000C1238E /* SportsTableViewController.swift */; };
+		DFA25B841C96F92900C1238E /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B831C96F92900C1238E /* Sport.swift */; };
+		DFA25B861C96F9BD00C1238E /* UIStoryboard+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B851C96F9BD00C1238E /* UIStoryboard+Initialization.swift */; };
+		DFA25B881C96FCB500C1238E /* GetSportsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B871C96FCB500C1238E /* GetSportsOperation.swift */; };
+		DFA25B8A1C96FFD400C1238E /* DownloadSportsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA25B891C96FFD400C1238E /* DownloadSportsOperation.swift */; };
 		DFAF59631C691D6300C89B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAF59621C691D6300C89B6F /* AppDelegate.swift */; };
 		DFAF59681C691D6300C89B6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAF59661C691D6300C89B6F /* Main.storyboard */; };
 		DFAF596A1C691D6300C89B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAF59691C691D6300C89B6F /* Assets.xcassets */; };
@@ -65,8 +75,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DF55EA011C97093200EE9484 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF55EA0A1C970AC600EE9484 /* RealmSwift.framework in Embed Frameworks */,
+				DF55EA081C970AC500EE9484 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DF03A3411C95BDAA00F2B7F2 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		DF55E9F21C97040400EE9484 /* ParseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseOperation.swift; sourceTree = "<group>"; };
+		DF55EA031C970ABA00EE9484 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		DF55EA041C970ABA00EE9484 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		DF6A94B31C91AC7E00BA832C /* ExpirationTokenCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpirationTokenCondition.swift; sourceTree = "<group>"; };
 		DF6A94B41C91AC7E00BA832C /* UserLoggedInCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoggedInCondition.swift; sourceTree = "<group>"; };
 		DF6A94BE1C91AC7E00BA832C /* LoginOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOperation.swift; sourceTree = "<group>"; };
@@ -99,6 +127,11 @@
 		DFA25B7A1C96EE4100C1238E /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		DFA25B7C1C96F23700C1238E /* UIView+Drawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Drawer.swift"; sourceTree = "<group>"; };
 		DFA25B7E1C96F62C00C1238E /* NSDate+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Formatter.swift"; sourceTree = "<group>"; };
+		DFA25B801C96F8C000C1238E /* SportsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsTableViewController.swift; sourceTree = "<group>"; };
+		DFA25B831C96F92900C1238E /* Sport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		DFA25B851C96F9BD00C1238E /* UIStoryboard+Initialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Initialization.swift"; sourceTree = "<group>"; };
+		DFA25B871C96FCB500C1238E /* GetSportsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSportsOperation.swift; sourceTree = "<group>"; };
+		DFA25B891C96FFD400C1238E /* DownloadSportsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadSportsOperation.swift; sourceTree = "<group>"; };
 		DFAF595F1C691D6300C89B6F /* PhotoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAF59621C691D6300C89B6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFAF59671C691D6300C89B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +151,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF55EA091C970AC600EE9484 /* RealmSwift.framework in Frameworks */,
+				DF55EA071C970AC500EE9484 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +181,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DF55E9F81C9708FB00EE9484 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DF55EA031C970ABA00EE9484 /* Realm.framework */,
+				DF55EA041C970ABA00EE9484 /* RealmSwift.framework */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
 		DF6A94B11C91AC7E00BA832C /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +213,9 @@
 			children = (
 				DF6A94BE1C91AC7E00BA832C /* LoginOperation.swift */,
 				DFA25B741C95C26E00C1238E /* RefreshTokenOperation.swift */,
+				DFA25B871C96FCB500C1238E /* GetSportsOperation.swift */,
+				DFA25B891C96FFD400C1238E /* DownloadSportsOperation.swift */,
+				DF55E9F21C97040400EE9484 /* ParseOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -244,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				DF78299C1C691F6D002F3191 /* LoginViewController.swift */,
+				DFA25B801C96F8C000C1238E /* SportsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,13 +333,23 @@
 				DFA25B7A1C96EE4100C1238E /* UIKit+Extensions.swift */,
 				DFA25B7C1C96F23700C1238E /* UIView+Drawer.swift */,
 				DFA25B7E1C96F62C00C1238E /* NSDate+Formatter.swift */,
+				DFA25B851C96F9BD00C1238E /* UIStoryboard+Initialization.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DFA25B821C96F91900C1238E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFA25B831C96F92900C1238E /* Sport.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DFAF59561C691D6300C89B6F = {
 			isa = PBXGroup;
 			children = (
+				DF55E9F81C9708FB00EE9484 /* Modules */,
 				DFAF59611C691D6300C89B6F /* PhotoList */,
 				DFAF59761C691D6300C89B6F /* PhotoListTests */,
 				DFAF59811C691D6300C89B6F /* PhotoListUITests */,
@@ -312,6 +370,7 @@
 		DFAF59611C691D6300C89B6F /* PhotoList */ = {
 			isa = PBXGroup;
 			children = (
+				DFA25B821C96F91900C1238E /* Model */,
 				DF78299B1C691F6D002F3191 /* Controllers */,
 				DF78299D1C691F6D002F3191 /* Operations */,
 				DF78299A1C691F5B002F3191 /* Storyboars */,
@@ -351,6 +410,8 @@
 				DFAF595B1C691D6300C89B6F /* Sources */,
 				DFAF595C1C691D6300C89B6F /* Frameworks */,
 				DFAF595D1C691D6300C89B6F /* Resources */,
+				DF55EA011C97093200EE9484 /* Embed Frameworks */,
+				DF55EA021C97094E00EE9484 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -467,21 +528,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DF55EA021C97094E00EE9484 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DFAF595B1C691D6300C89B6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA25B8A1C96FFD400C1238E /* DownloadSportsOperation.swift in Sources */,
 				DF6A94F11C91AC7E00BA832C /* RemoteNotificationCondition.swift in Sources */,
 				DF6A94E81C91AC7E00BA832C /* LoginOperation.swift in Sources */,
 				DFA25B751C95C26E00C1238E /* RefreshTokenOperation.swift in Sources */,
 				DF6A94F51C91AC7E00BA832C /* NetworkObserver.swift in Sources */,
+				DFA25B861C96F9BD00C1238E /* UIStoryboard+Initialization.swift in Sources */,
 				DF6A94F91C91AC7E00BA832C /* BlockOperation.swift in Sources */,
 				DF6A94F01C91AC7E00BA832C /* ReachabilityCondition.swift in Sources */,
 				DF6A94EC1C91AC7E00BA832C /* NegatedCondition.swift in Sources */,
 				DFA25B7F1C96F62C00C1238E /* NSDate+Formatter.swift in Sources */,
 				DF6A94ED1C91AC7E00BA832C /* NoCancelledDependencies.swift in Sources */,
 				DFA25B7D1C96F23700C1238E /* UIView+Drawer.swift in Sources */,
+				DFA25B841C96F92900C1238E /* Sport.swift in Sources */,
 				DF6A94DE1C91AC7E00BA832C /* ExpirationTokenCondition.swift in Sources */,
 				DF6A94F31C91AC7E00BA832C /* UserNotificationCondition.swift in Sources */,
 				DF03A3421C95BDAA00F2B7F2 /* RoundedButton.swift in Sources */,
@@ -496,6 +578,7 @@
 				DF6A94EE1C91AC7E00BA832C /* OperationCondition.swift in Sources */,
 				DFAF59631C691D6300C89B6F /* AppDelegate.swift in Sources */,
 				DF6A94FF1C91AC7E00BA832C /* OperationQueue.swift in Sources */,
+				DF55E9F31C97040400EE9484 /* ParseOperation.swift in Sources */,
 				DF6A94F61C91AC7E00BA832C /* OperationObserver.swift in Sources */,
 				DF6A94F41C91AC7E00BA832C /* BlockObserver.swift in Sources */,
 				DF6A95001C91AC7E00BA832C /* Dictionary+Operations.swift in Sources */,
@@ -506,6 +589,8 @@
 				DF6A94EF1C91AC7E00BA832C /* OperationErrors.swift in Sources */,
 				DF6A95011C91AC7E00BA832C /* NSOperation+Operations.swift in Sources */,
 				DF6A94FE1C91AC7E00BA832C /* ExclusivityController.swift in Sources */,
+				DFA25B811C96F8C000C1238E /* SportsTableViewController.swift in Sources */,
+				DFA25B881C96FCB500C1238E /* GetSportsOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +730,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhotoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsconfar.operations.PhotoList;
@@ -656,6 +745,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhotoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsconfar.operations.PhotoList;

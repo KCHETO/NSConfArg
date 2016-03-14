@@ -9,7 +9,7 @@
 import UIKit
 
 private let TokenExpirationQueue = OperationQueue()
-private let tokenExpirationThreshold = NSTimeInterval(60 * 5)
+private let tokenExpirationThreshold = NSTimeInterval(60)
 
 private enum TokenExpirationResult {
     case NotExpire
@@ -69,10 +69,7 @@ private class ExpirationTokenOperation: Operation {
     }
     
     private override func execute() {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let expirationDate: NSDate? = userDefaults.objectForKey("token_expiration_date") as? NSDate
-        
-        if let expiration = expirationDate {
+        if let expiration = Credentials.sharedInstance.expirationDate {
             let interval = NSDate().timeIntervalSinceDate(expiration)
             if interval > (-1 * tokenExpirationThreshold) {
                 let tokenExpiration = RefreshTokenOperation { error in
