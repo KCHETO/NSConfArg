@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class DownloadSportsOperation: GroupOperation {
 
@@ -31,12 +32,17 @@ class DownloadSportsOperation: GroupOperation {
         
         let taskOperation = URLSessionTaskOperation(task: task)
         
-        let refreshTokenCondition = ExpirationTokenCondition()
+        // Adding conditions
+        let refreshTokenCondition = NonExpirationTokenCondition()
         taskOperation.addCondition(refreshTokenCondition)
+        
+        let loggedInOperation = UserLoggedInCondition()
+        taskOperation.addCondition(loggedInOperation)
         
         let reachabilityCondition = ReachabilityCondition(host: url!)
         taskOperation.addCondition(reachabilityCondition)
         
+        // Observers
         let networkObserver = NetworkObserver()
         taskOperation.addObserver(networkObserver)
         
@@ -45,17 +51,27 @@ class DownloadSportsOperation: GroupOperation {
     }
     
     private func downloadFinished(data: NSData?, error: NSError?) {
+        print("SE TERMINO DE EJECUTAR LA DESCARGA DE DEPORTES")
         if let raw = data {
             do {
                 try NSFileManager.defaultManager().removeItemAtURL(_cacheFile)
             } catch {}
             
-            if !raw.writeToURL(_cacheFile, atomically: true) {
-                aggregateError(NSError(domain: "Save on file", code: 1, userInfo: ["error_msg": "Could not save on file"]))
+            do {
+                let nsJson = try NSJSONSerialization.JSONObjectWithData(raw, options: NSJSONReadingOptions.AllowFragments)
+                let json = JSON(nsJson)
+                if let jsonAsStr = json.rawString() {
+                    
+                    try jsonAsStr.writeToURL(_cacheFile, atomically: false, encoding: NSUTF8StringEncoding)
+                    finish()
+                }
+            } catch {
+                print("No se pudo guardar en el archivo")
+                finishWithError(NSError(domain: "Save on file", code: 1, userInfo: ["error_msg": "Could not save on file"]))
             }
         }
         else if let error = error {
-            aggregateError(error)
+            finishWithError(error)
         }
         else {
             // Do nothing, and the operation will automatically finish.

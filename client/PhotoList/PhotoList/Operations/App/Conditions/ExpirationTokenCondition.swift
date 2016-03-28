@@ -18,13 +18,13 @@ private enum TokenExpirationResult {
     case DontExistExpirationDate
 }
 
-class ExpirationTokenCondition: OperationCondition {
+class NonExpirationTokenCondition: OperationCondition {
     
     static let name = "ExpirationToken"
     static let isMutuallyExclusive = false
     
     func dependencyForOperation(operation: Operation) -> NSOperation? {
-        return ExpirationTokenOperation(handler: { _ in })
+        return nil
     }
     
     func evaluateForOperation(operation: Operation, completion: OperationConditionResult -> Void) {

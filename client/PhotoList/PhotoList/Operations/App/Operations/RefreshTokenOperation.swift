@@ -46,6 +46,8 @@ class RefreshTokenOperation: GroupOperation {
         super.init(operations: [requestOperation])
         
         name = "Refresh Token"
+        
+        print("Refrescando el token....")
     }
     
     internal override func operationDidFinish(operation: NSOperation, withErrors errors: [NSError]) {

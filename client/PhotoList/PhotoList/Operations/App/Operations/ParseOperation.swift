@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import SwiftyJSON
 
 class ParseOperation: Operation {
 
@@ -25,34 +26,24 @@ class ParseOperation: Operation {
     }
 
     override func execute() {
-        guard let stream = NSInputStream(URL: _cacheFile) else {
-            finish()
-            return
-        }
-        
-        stream.open()
-        
-        defer {
-            stream.close()
-        }
-        
+        print("PARSEANDO EL ARCHIVO")
         do {
-            let json = try NSJSONSerialization.JSONObjectWithStream(stream, options: []) as? [String: AnyObject]
-            
-            if let features = json?["sports"] as? [[String: AnyObject]] {
-                parse(features)
-            }
-            else {
-                finish()
+            let jsonStr = try String(contentsOfURL: _cacheFile, encoding: NSUTF8StringEncoding)
+            if let data = jsonStr.dataUsingEncoding(NSUTF8StringEncoding) {
+                let json = JSON(data: data)
+                if let sports = json["sports"].array {
+                    parse(sports)
+                }
             }
             
         } catch let jsonError as NSError {
+            print("No se pudo leer el json del archivo: (\(jsonError))")
             finishWithError(jsonError)
         }
     }
     
-    private func parse(sports: [[String: AnyObject]]) {
-        let sports = sports.flatMap { Sport(json: $0) }        
+    private func parse(sports: [JSON]) {
+        let sports = sports.flatMap { Sport(json: $0.dictionaryObject!) }
         dispatch_async(self._realmQueue) {
             do {
                 let db = try Realm()
@@ -62,6 +53,7 @@ class ParseOperation: Operation {
             } catch let error as NSError {
                 self.finishWithError(error)
             }
+            self.finish()
         }
     }
     

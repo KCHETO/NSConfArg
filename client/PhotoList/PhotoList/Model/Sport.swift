@@ -21,4 +21,15 @@ class Sport: Object {
         self.imageURL = json["image_url"] as! String
         self.category = json["category"] as! String
     }
+    
+    override func isEqual(object: AnyObject?) -> Bool {
+        if let sport = object as? Sport {
+            if self == sport {
+                return true
+            }
+            
+            return self.name == sport.name
+        }
+        return false
+    }
 }
